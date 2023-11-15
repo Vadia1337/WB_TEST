@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: PgUser
+      POSTGRES_USER: PgUser
+      POSTGRES_DB: game
+    ports:
+      - "5433:5432"
